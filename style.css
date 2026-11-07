@@ -1,0 +1,48 @@
+:root {
+  --paper: #f6f4ec;
+  --ink: #203c30;
+  --muted: #536259;
+  --line: #d3d9ce;
+  --lime: #d4ee97;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; }
+a { color: inherit; text-underline-offset: 5px; }
+a:focus-visible { outline: 3px solid #758d37; outline-offset: 6px; }
+.wrap { width: min(1120px, 88%); margin-inline: auto; }
+.skip-link { position: absolute; top: -80px; padding: 12px; background: white; z-index: 2; }
+.skip-link:focus { top: 10px; }
+.site-header { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
+.wordmark { font-size: 23px; font-weight: 750; text-decoration: none; letter-spacing: -1px; }
+.wordmark span { color: #6f842d; }
+nav { display: flex; gap: 30px; font-size: 14px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 65px; align-items: center; padding-block: 70px 84px; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+h1 { font-size: clamp(48px, 5.8vw, 78px); line-height: 1.04; font-weight: 500; letter-spacing: -4px; margin: 26px 0; }
+h1 span { font-family: Georgia, serif; font-weight: 400; }
+.welcome { max-width: 360px; font-size: 17px; line-height: 1.7; color: var(--muted); }
+.button { display: inline-flex; gap: 35px; align-items: center; padding: 15px 22px; margin-top: 14px; background: var(--ink); color: white; text-decoration: none; font-size: 14px; border-radius: 4px; }
+.button:hover { background: #365b46; }
+.hello-art { background: var(--ink); color: var(--lime); min-height: 440px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 160px 160px 8px 8px; }
+.art-label { text-align: center; font-size: 10px; letter-spacing: 2px; margin-top: 48px; }
+.art-type { font-family: Georgia, serif; font-size: clamp(64px, 7.5vw, 102px); line-height: .9; letter-spacing: -5px; text-align: center; margin: 32px 0; }
+.art-type span { display: block; font-style: italic; }
+.art-footer { border-top: 1px solid #657b58; padding-top: 20px; display: flex; justify-content: space-between; gap: 12px; font-size: 10px; }
+.about { border-top: 1px solid var(--line); padding-block: 65px 80px; display: grid; grid-template-columns: 1fr 2fr; gap: 50px; }
+h2 { font-family: Georgia, serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; line-height: 1.15; letter-spacing: -1px; margin: 0 0 26px; }
+.about p:not(.eyebrow) { font-size: 16px; line-height: 1.85; color: var(--muted); max-width: 610px; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 28px; display: flex; justify-content: space-between; gap: 20px; font-size: 12px; }
+@media (max-width: 700px) {
+  .site-header { min-height: 90px; flex-wrap: wrap; padding-block: 20px; gap: 16px; }
+  nav { gap: 22px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 44px 50px; }
+  h1 { letter-spacing: -2px; }
+  .hello-art { min-height: 360px; max-width: 440px; width: 100%; margin-inline: auto; }
+  .art-type { font-size: 88px; }
+  .about { grid-template-columns: 1fr; gap: 22px; padding-block: 40px; }
+  .site-footer { flex-direction: column; gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
